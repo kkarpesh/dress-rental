@@ -14,8 +14,13 @@
         </encoder>
     </appender>
 
-    <logger name = "com.epam.brest.courses.dao" level="DEBUG">
+    <logger name = "com.epam.brest.courses" level="DEBUG">
         <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger name="org.springframework.aop.interceptor.PerformanceMonitorInterceptor" additivity="false">
+        <level value="TRACE"/>
+        <appender-ref ref="STDOUT"/>
     </logger>
 
     <root level="DEBUG">
